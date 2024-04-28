@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Desai</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e0172fed1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Port<span style="color: #ff004f;">folio</span></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="Saurabh Desai CV.pdf">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="textBx">
+            <h2>
+                Hello, I'm<br><span>Saurabh Shankar Desai</span>
+            </h2><br>
+            <h3>
+                 <span style="color: #ff0000;">Pre-Final Year Mechanical Engineering Student</span>
+            </h3>
+
+        </div>
+    </section>
+    <!-- -------------about------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" align="center">About Me</h1>
+                    <p>I'm a Mechanical Engineering Student pursuing B.Tech from Veermata Jijabai Technological Institute,
+                        Mumbai. I'm interested to solve real world problems.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Softwares</span><br>
+                                SolidWorks, Fusion 360, Ansys, AutCad, Ultimaker Cura
+                            </li>
+
+                            <li>
+                                <span>Languages</span><br>
+                                C++, Python, ROS, G&M code, 
+                            </li>
+                            
+                            <li>
+                                <span>Platform</span><br>
+                                VS Code, Git, GitHub
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2019</span><br>
+                                10th from Mane Deshmukh Vidyalay, Patan.
+                            </li>
+                            <li>
+                                <span>2021</span><br>
+                                12th from Balasaheb Desai College, Patan.
+                            </li>
+                            <li>
+                                <span>2021-Present</span><br>
+                                Pursuing Btech in Mechanical Engineering from Veermata Jijabai Technological Institute,
+                                Mumbai
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li>
+                                <span>Mars Rover prototype</span><br>
+                                <a href="https://github.com/SaurabhDesai804/Mars-Rover-Prototype"
+                                    style="color:#ababab;text-decoration: none;">Major Project</a>
+                            </li>
+                            <li>
+                                <span>Smart Irrigation System</span><br>
+                                <a href="https://github.com/SaurabhDesai804/Smart-Irrigation-System-"
+                                    style="color:#ababab;text-decoration: none;">Personal Project</a>
+                            </li>
+                            <li>
+                                <span>Personal Portfolio</span><br>
+                                <a href="https://github.com/SaurabhDesai804/Personal-Portfolio"
+                                    style="color:#ababab;text-decoration: none;">Mini Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------contact------------- -->
+    <footer id="contact">
+        <p>Contact Me</p>
+        <div class="r">
+            <div class="col1">
+                <h6 align="center"><i class="fa-solid fa-envelope"></i> saurabhdesai2003@gmail.com</h6>
+            </div>
+            <div class="col2">
+                <h5 align="center"><i class="fa-sharp fa-regular fa-location-dot"></i> Patan, Maharashtra - 415206</h5>
+            </div>
+            <div class="col3">
+                <h5 align="center"><i class="fa-solid fa-phone"></i> +91-7768986402</h5>
+            </div>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/saurabh-desai-b7a772248/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/saurabhdesai804/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/SaurabhDesai804/"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="end">CopyRight By Saurabh Desai</p>
+    </footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script type="text/Javascript">
+    window.addEventListener('scroll', function(){
+        var header= document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY>0);
+    });
+    function toggleMenu() {
+        var menuToggle=document.querySelector('.toggle');
+        var menu=document.querySelector('.menu');
+        menuToggle.classList.toggle('active')
+        menu.classList.toggle('active')
+    }
+   </script>
+</body>
+
+</html>
